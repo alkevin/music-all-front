@@ -25,10 +25,10 @@ If you'd like to contribute, please read the following documents:
 [5]: https://github.com/alkevin/music-all-front/blob/master/.github/ISSUE_TEMPLATE/4_Support_question.md
 [6]: https://github.com/alkevin/music-all-front/blob/master/CODE_OF_CONDUCT.md
 
-## We Develop with Github
+## We develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
-## We Use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), So All Code Changes Happen Through Pull Requests
+## We use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), so all code changes happen through pull requests
 Pull requests are the best way to propose changes to the codebase (we use [Git Flow](https://guides.github.com/introduction/flow/index.html)). 
 If you need more [details](https://datasift.github.io/gitflow/IntroducingGitFlow.html). We actively welcome your pull requests:
 
@@ -44,11 +44,11 @@ In short, when you submit code changes, your submissions are understood to be un
 
 ## Report bugs using Github's [issues](https://github.com/alkevin/music-all-front/issues)
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/alkevin/music-all-front/issues); it's that easy!
-> Use issues templates relating to what you need
+> Use issues templates relating to what you need.
 >
-## Use a Consistent Coding Style
-We use hadolint [see](https://github.com/hadolint/hadolint) to our code style 
+## Use a consistent coding style
+We use [hadolint](https://github.com/hadolint/hadolint) to our code style .
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT License.
-[LINCENSE](LICENSE.md)
+By contributing, you agree that your contributions will be licensed under its MIT [License](LICENSE.md).
+
