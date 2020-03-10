@@ -117,4 +117,4 @@ See also the list of [contributors](https://github.com/alkevin/music-all-front/g
 
 DM Continuous Integration (20.4) Star Was API is MIT licensed, as found in the [LICENSE][0] file.
 
-[0]: https://github.com/alkevin/music-all-front/blob/master/LICENCE.md
+[0]: https://github.com/alkevin/music-all-front/blob/master/LICENSE.md

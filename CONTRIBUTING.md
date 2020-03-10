@@ -29,7 +29,7 @@ If you'd like to contribute, please read the following documents:
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
 ## We Use [Git Flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), So All Code Changes Happen Through Pull Requests
-Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). 
+Pull requests are the best way to propose changes to the codebase (we use [Git Flow](https://guides.github.com/introduction/flow/index.html)). 
 If you need more [details](https://datasift.github.io/gitflow/IntroducingGitFlow.html). We actively welcome your pull requests:
 
 1. Fork the repo and create your branch `feature` from `develop`.
@@ -43,7 +43,7 @@ If you need more [details](https://datasift.github.io/gitflow/IntroducingGitFlow
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](LICENSE.md) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs using Github's [issues](https://github.com/alkevin/music-all-front/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/alkevin/music-all-front/issues/new); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/alkevin/music-all-front/issues); it's that easy!
 > Use issues templates relating to what you need
 >
 ## Use a Consistent Coding Style
