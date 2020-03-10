@@ -3,6 +3,8 @@ Front End for Project Music'All - projet annuel IPSSI 2020
 
 The application is about creating a social network dedicated to musiciens and provide social space service to offert them the possibility to increase visibility and help them to manage an hobbie or professionnal carrier and organize event and meet people who maybe are searching for other people to work on or play a song.
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+
 ------
 >   Please note that this project is released with a Contributor [Code of Conduct](https://github.com/alkevin/music-all-front/blob/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 ------
@@ -11,6 +13,9 @@ The application is about creating a social network dedicated to musiciens and pr
 
 -------
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://github.com/alkevin/music-all-front/blob/master/CODE_OF_CONDUCT.md)
+![GitHub](https://img.shields.io/github/license/alkevin/music-all-front?style=plastic)
+![David](https://img.shields.io/david/WingsHell/tools-for-ci.svg?color=%234b1&style=plastic)
+-------
 
 -------
 
