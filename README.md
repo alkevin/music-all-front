@@ -17,7 +17,25 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![David](https://img.shields.io/david/WingsHell/tools-for-ci.svg?color=%234b1&style=plastic)
 -------
 
+## [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+
 -------
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=alert_status)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=code_smells)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=coverage)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=security_rating)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+-------
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=alkevin_music-all-front&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=alkevin_music-all-front)
+-------
+
+-------
+
+## Wanna try ?
+
+> Go to Heroku - [Music'All](https://music-all-front.herokuapp.com/)
+
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy this project.
