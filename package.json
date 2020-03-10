@@ -5,7 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:ci": "npm run test && npm run build:prod",
+    "build:prod": "ng build --prod",
     "test": "ng test",
+    "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
