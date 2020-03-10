@@ -122,6 +122,6 @@ jobs:
       run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/music-all-front:latest
     - name: Publish images to Github Registry
       run: |
-        MUSIC_ALL_FRONT_ID=docker.pkg.github.com/${{ github.repository }}/Music-All-Front
+        MUSIC_ALL_FRONT_ID=docker.pkg.github.com/${{ github.repository }}/music-all-front
         docker push $MUSIC_ALL_FRONT_ID:${{steps.vars.outputs.tag}}
         docker push $MUSIC_ALL_FRONT_ID:latest
