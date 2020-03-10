@@ -12,7 +12,7 @@ jobs:
     name: Setup for ${{ matrix.os }}
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
     - name: Determine npm cache directory
       id: npm-cache
       run: |
@@ -35,7 +35,7 @@ jobs:
     needs: setup
     name: Test Music-All-Front App
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Install dependencies
       run: npm ci --prefer-dist --no-progress --no-suggest --no-scripts
     - name: Build & test
@@ -49,6 +49,6 @@ jobs:
         path: coverage
 
 
-  
+
 
 
