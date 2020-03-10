@@ -117,9 +117,9 @@ jobs:
       id: vars
       run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
     - name: Build the tagged Front image
-      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/Music-All-Front:${{steps.vars.outputs.tag}}
+      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/music-all-front:${{steps.vars.outputs.tag}}
     - name: Build the latest Angular image
-      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/Music-All-Front:latest
+      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/music-all-front:latest
     - name: Publish images to Github Registry
       run: |
         MUSIC_ALL_FRONT_ID=docker.pkg.github.com/${{ github.repository }}/Music-All-Front
