@@ -1,0 +1,127 @@
+name: Deploy Music-All-Front Projects
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  setup:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node-version: [ 10.16.3 ]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    name: Setup for ${{ matrix.os }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Determine npm cache directory
+      id: npm-cache
+      run: |
+        echo "::set-output name=dir::$(npm config get cache)"
+    - name: Restore npm cache
+      uses: actions/cache@v1
+      with:
+        path: ${{ steps.npm-cache.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Setup Node.js
+      if: steps.npm-cache.outputs.cache-hit != 'true'
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+  test:
+    runs-on: ubuntu-latest
+    needs: setup
+    name: Test Music-All-Front App
+    steps:
+    - uses: actions/checkout@master
+    - name: Install dependencies
+      run: npm ci --prefer-dist --no-progress --no-suggest --no-scripts
+    - name: Build & test
+      run: npm run build:ci
+    - name: Look in VM
+      run: ls -la .
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v1
+      with:
+        name: code-coverage-report
+        path: coverage
+
+  sonar:
+    runs-on: ubuntu-latest
+    needs: test
+    name: SonarCloud Trigger
+    steps:
+    - uses: actions/checkout@master
+    - name: Download code coverage results
+      uses: actions/download-artifact@v1
+      with:
+        name: code-coverage-report
+        path: coverage
+    - name: Look in VM
+      run: ls -la .
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+        projectBaseDir: .
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  #hadolint:
+  #  name: Test Dockerfile
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - name: Checkout Source
+  #    uses: actions/checkout@v2
+  #  - name: Install Docker
+  #    run: curl -sSL https://get.docker.com/ | sh
+  #  - name: Run hadolint
+  #    run: docker run --rm -i hadolint/hadolint < Dockerfile
+
+  heroku:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+    - uses: actions/checkout@master
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
+    - name: push to heroku
+      env :
+        HEROKU_REGISTRY_URL: registry.heroku.com
+        HEROKU_TOKEN : ${{ secrets.HEROKU_API_KEY }}
+      run : |
+        echo $HEROKU_TOKEN | docker login --username=_ $HEROKU_REGISTRY_URL --password-stdin
+        export HEROKU_API_KEY=$HEROKU_TOKEN
+        heroku container:login
+        heroku logs --app ${{ secrets.HEROKU_APP_NAME }}
+        heroku container:push web --app ${{ secrets.HEROKU_APP_NAME }}
+        heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
+        heroku ps:scale web=1 --app ${{ secrets.HEROKU_APP_NAME }}
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: [setup, test, sonar]
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@master
+    - name: Install Docker
+      run: curl -sSL https://get.docker.com/ | sh
+    - name: Login to Github Registry
+      run: echo ${{ secrets.REGISTRY_TOKEN }} | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+    - name: Get the version
+      id: vars
+      run: echo ::set-output name=tag::${GITHUB_REF/refs\/tags\//}
+    - name: Build the tagged Front image
+      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/Music-All-Front:${{steps.vars.outputs.tag}}
+    - name: Build the latest Angular image
+      run: docker build . --file Dockerfile -t docker.pkg.github.com/${{ github.repository }}/Music-All-Front:latest
+    - name: Publish images to Github Registry
+      run: |
+        MUSIC_ALL_FRONT_ID=docker.pkg.github.com/${{ github.repository }}/Music-All-Front
+        docker push $MUSIC_ALL_FRONT_ID:${{steps.vars.outputs.tag}}
+        docker push $MUSIC_ALL_FRONT_ID:latest
