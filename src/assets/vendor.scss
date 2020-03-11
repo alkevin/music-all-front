@@ -1,0 +1,58 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~node_modules/primeicons/primeicons.css";
+@import "~node_modules/primeng/resources/themes/nova-light/theme.css";
+@import "~node_modules/primeng/resources/primeng.min.css";
+
+// @ng-select
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.form-group-xs .ng-select.custom .ng-select-container {
+  min-height: 26px;
+  height: 26px;
+}
+.form-group-xs .ng-select.custom .ng-select-container .ng-value-container .ng-input {
+  top: 0;
+}
+.form-group-xs .ng-dropdown-panel .ng-dropdown-panel-items .ng-option .ng-option-label,
+.form-group-xs .ng-dropdown-panel .ng-dropdown-panel-items .ng-option div {
+  font-size: small;
+}
+
+.ng-select.ng-invalid.ng-touched .ng-select-container {
+  border-color: rgba(255, 10, 29, 1) !important;
+  box-shadow: none !important;
+}
+
+.ng-select.ng-invalid.ng-touched.ng-select-focused .ng-select-container {
+  box-shadow: 0 0 0 0.2rem rgba(255, 10, 29, 0.25) !important;
+}
+
+/**
+ng bootstrap
+ */
+.card-footer ul.pagination {
+  margin-bottom: 0;
+}
+
+/**
+ngx-toastr
+ */
+@import "~ngx-toastr/toastr.css";
+
+/**
+Font Awesome 5
+ */
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+
+$font-family-icon: 'Font Awesome 5 Free';
+$check-icon: "\f00c";
+.abc-checkbox label:after {
+  padding-left: 4px;
+  padding-top: 2px;
+  font-size: 9px;
+  font-weight: 900;
+}
+@import "~awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";
