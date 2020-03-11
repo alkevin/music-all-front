@@ -1,7 +1,7 @@
-import { App.Constants } from './app.constants';
+import { AppConstants } from './app.constants';
 
-describe('App.Constants', () => {
+describe('AppConstants', () => {
   it('should create an instance', () => {
-    expect(new App.Constants()).toBeTruthy();
+    expect(new AppConstants()).toBeTruthy();
   });
 });

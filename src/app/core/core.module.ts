@@ -4,10 +4,12 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     SharedModule,
@@ -17,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   exports: [
     HeaderComponent,
+    FooterComponent
   ]
 })
 export class CoreModule {

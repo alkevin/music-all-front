@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   appTitle = AppConstants.appTitle;
   yearNow = new Date().getFullYear().toString();
-  version = VERSION;
+  version = VERSION.full;
 
   constructor(private utilsService: UtilsService) {
 
