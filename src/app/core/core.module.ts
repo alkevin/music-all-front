@@ -3,9 +3,11 @@ import { ProtectedModule } from '../protected/protected.module';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
+    HeaderComponent
   ],
   imports: [
     SharedModule,
@@ -14,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProtectedModule
   ],
   exports: [
+    HeaderComponent,
   ]
 })
 export class CoreModule {
