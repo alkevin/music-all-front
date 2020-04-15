@@ -1,0 +1,23 @@
+.center_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkgray;
+  height: 100vh;
+}
+
+.cardStyle {
+  border-radius: 10px;
+  border: none;
+  background-color: #343a40;
+  font-size: 16px;
+  width: 450px;
+  margin: auto;
+}
+
+.btnHide {
+  border: none;
+  box-shadow: inherit;
+  transition: inherit;
+  padding-left: 9%;
+}
