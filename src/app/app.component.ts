@@ -9,6 +9,8 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements OnInit {
 
+  urlLogo = AppConstants.assetLogoPath;
+  urlFaviLogo = AppConstants.assetFaviLogoPath;
   appTitle = AppConstants.appTitle;
   yearNow = new Date().getFullYear().toString();
   version = VERSION.full;
@@ -25,6 +27,7 @@ export class AppComponent implements OnInit {
         }
       }
     });
+
   }
 
   ngOnInit(): void {

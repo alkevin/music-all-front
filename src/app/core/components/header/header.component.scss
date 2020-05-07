@@ -1,0 +1,51 @@
+.navbar {
+  position: fixed;
+  padding: inherit !important;
+  height: 4rem;
+  top: 0;
+  right: 0;
+  align-content: center;
+}
+
+.float-right {
+  display: flex;
+}
+
+#avatar {
+  margin: auto;
+
+  //background-image: url('/assets/img/Favicon-blanc.png');
+
+  /* make a square container */
+  width: 50px;
+  height: 50px;
+
+  /* fill the container, preserving aspect ratio, and cropping to fit */
+  background-size: cover;
+
+  /* center the image vertically and horizontally */
+  background-position: top center;
+
+  /* round the edges to a circle with border radius 1/2 container size */
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+
+/* Mobile & Tablet Screens */
+@media only screen and (max-width: 959px){
+  .navbar {
+    left: 0;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 960px){
+  .navbar {
+    left: 5rem;
+  }
+
+  img {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+<nav class="navbar text-white">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <a href="#" class="nav-logo">
+        <img [src]="urlFaviLogo">
+        <img class="link-text" [src]="urlLogo">
+      </a>
+    </li>
+
+    <li class="nav-item" *ngFor="let pic of urlPicSidLeft; let i = index;">
+      <a href="#" class="nav-link">
+        <img [src]=pic.url>
+        <span class="link-text">{{ pic.label }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
