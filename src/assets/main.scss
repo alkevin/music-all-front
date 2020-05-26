@@ -89,10 +89,18 @@ input.ng-invalid.ng-touched:focus {
   }
 }
 
-/* Tablet Landscape Screens */
+/* Tablet Landscape & Desktop Screens */
 @media only screen and (min-width: 960px){
   main {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 21rem;
+    margin-right: 21rem;
   }
 }
+
+/* Large Screens */
+/*@media only screen and (min-width: 1200px){
+  main {
+    margin-left: 21rem;
+    margin-right: 21rem;
+  }
+}*/

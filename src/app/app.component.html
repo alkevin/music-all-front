@@ -2,9 +2,11 @@
 
 <app-left *ngIf="showHead" [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-left>
 
+  <app-left-partenaire *ngIf="showHead"></app-left-partenaire>
 
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
+  <app-right-partenaire *ngIf="showHead"></app-right-partenaire>
 
 <app-right *ngIf="showHead" [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-right>
 
