@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkgray;
   height: 100vh;
+  background-color: var(--primary);
 }
 
 .cardStyle {
@@ -27,4 +27,22 @@ main{
   padding: 0 !important;
   margin: 0 !important;
   min-height: 100%;
+}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
 }
