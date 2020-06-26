@@ -12,12 +12,14 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { LoginComponent } from './components/login/login.component';
 registerLocaleData(localeFr, 'fr');
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

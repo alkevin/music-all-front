@@ -1,0 +1,18 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.8rem;
+  margin-top: -1.8rem;
+  line-height: 1.8rem;
+  clear: both;
+  align-content: center;
+}
+
+/* Mobile & Tablet Screens */
+@media only screen and (max-width: 959px){
+  .footer {
+    display: none;
+  }
+}

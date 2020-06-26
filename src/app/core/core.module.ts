@@ -5,11 +5,20 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LeftComponent } from './components/sidenav/left/left.component';
+import { RightComponent } from './components/sidenav/right/right.component';
+import { LeftPartenaireComponent } from './components/sidepartenaire/left-partenaire/left-partenaire.component';
+import { RightPartenaireComponent } from './components/sidepartenaire/right-partenaire/right-partenaire.component';
+
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LeftComponent,
+    RightComponent,
+    LeftPartenaireComponent,
+    RightPartenaireComponent
   ],
   imports: [
     SharedModule,
@@ -19,7 +28,11 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LeftComponent,
+    RightComponent,
+    LeftPartenaireComponent,
+    RightPartenaireComponent
   ]
 })
 export class CoreModule {
