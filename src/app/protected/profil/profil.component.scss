@@ -1,0 +1,31 @@
+.center_container_profil{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 12vh;
+}
+
+.container_avatar{
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  width: 100%;
+  padding-left: 8%;
+  margin-bottom: 5%;
+}
+
+.container_info_profil{
+  display: inline-block;
+  width: 45%;
+  padding-left: 10%;
+  margin-bottom: 5%;
+}
+
+#avatar_profil{
+  display: inline-block;
+  padding: 0rem 20rem 0rem 20rem;
+}
+
+#nom_profil{
+  display: inline-block;
+}

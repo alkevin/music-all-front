@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   yearNow = new Date().getFullYear().toString();
   version = VERSION.full;
   showHead = false;
+  showNavPartenaire = false;
 
   constructor(private utilsService: UtilsService, private router: Router) {
     // on route change to '/login', set the variable showHead to false
@@ -22,8 +23,18 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         if (event.url === '/login') {
           this.showHead = false;
+          this.showNavPartenaire = false;
         } else {
           this.showHead = true;
+          this.showNavPartenaire = true;
+        }
+
+        if (event.url === '/profil'){
+          this.showHead = true;
+          this.showNavPartenaire = false;
+        } else {
+          this.showHead = true;
+          this.showNavPartenaire = true;
         }
       }
     });

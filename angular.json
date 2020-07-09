@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "music-all-front"
+    }
+  },
+  "defaultProject": "music-all-front",
+  "cli": {
+    "analytics": false
+  }
 }
