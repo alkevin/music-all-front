@@ -13,6 +13,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { LoginComponent } from './components/login/login.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -30,6 +34,14 @@ registerLocaleData(localeFr, 'fr');
     CoreModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
+    StoreModule.forRoot(reducers, {
+      metaReducers, 
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true,
+      }
+    }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'fr'},
