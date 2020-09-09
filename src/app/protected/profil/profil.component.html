@@ -1,54 +1,14 @@
 <div class="center_container_profil">
-  <div class="container_avatar">
-    <div id="avatar_profil" [ngStyle]="{'background-image': 'url('+ myUrlPhoto +')'}">
-      image profil
+  <div class="container_info_premier">
+    <div class="container_avatar">
+      <div id="avatar_profil">
+        <img id="img_avatar_profil" [src]="myUrlPhoto">
+      </div>
     </div>
     <div id="nom_profil">
-      emplacement nom
+      Roger Lafondu
     </div>
   </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Informations personnelles</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Informations musicales</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Card header</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Card header</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
+  <app-perso-info></app-perso-info>
+  <app-musical-info></app-musical-info>
 </div>
