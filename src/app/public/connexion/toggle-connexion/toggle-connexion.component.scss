@@ -1,0 +1,24 @@
+.navbar {
+  padding: inherit !important;
+  height: 3rem;
+  align-content: center;
+}
+
+#navbarMain {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;;
+}
+
+.nav-link {
+  //margin: 0 2rem 0 2rem;
+}
+
+.navbar {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}

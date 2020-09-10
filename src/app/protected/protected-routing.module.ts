@@ -10,8 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'profil',
-    component: ProfilComponent
-  },
+    loadChildren: () => import('./profil/profil.module').then(m => m.ProfilModule)
+  }
 ];
 
 @NgModule({

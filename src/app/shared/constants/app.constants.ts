@@ -1,5 +1,19 @@
 export class AppConstants {
 
+  private static baseUrl = 'http://localhost:5000/api';
+
+  public static get api_login_url(): string {
+    return this.baseUrl + '/auth/signin';
+  }
+
+  public static get api_refresh_url(): string {
+    return this.baseUrl + '/user/profile/me';
+  }
+
+  public static get api_signup_url(): string {
+    return this.baseUrl + '/auth/signup';
+  }
+
   public static get appTitle(): string {
     return 'Music\'All';
   }

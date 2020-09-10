@@ -17,11 +17,15 @@
     </ul>
     <div class="float-right pr-3 m-0 text-center">
       <span class="navbar-text text-white">
-        <span class="pr-3">
-          <button class="btn btn-primary" href="#">Connexion</button>
+        <span class="pr-3" *ngIf="!user?.connected">
+          <button class="btn btn-primary" [routerLink]="['/connexion/signin']">Connexion</button>
+        </span>
+        <span class="pr-3" *ngIf="user?.connected" style="display:flex; flex-direction: column">
+          {{ user.firstName }} {{ user.lastName | uppercase }}
+          <button class="btn btn-primary" (click)="logout()" style="padding:0 !important; font-size:small">Deconnexion</button>
         </span>
       </span>
-      <div id="avatar" [ngStyle]="{'background-image': 'url('+ myUrlPhoto +')'}" ></div>
+      <div id="avatar" [ngStyle]="{'background-image': 'url('+ myUrlPhoto +')'}" [routerLink]="['profil']" title="profil"></div>
     </div>
   </div>
 </nav>

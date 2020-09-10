@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import { EncodeUriPipe } from './pipes/encode-uri.pipe';
+
 
 @NgModule({
-  declarations: [
-    EncodeUriPipe
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
@@ -18,8 +16,7 @@ import { EncodeUriPipe } from './pipes/encode-uri.pipe';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule,
-    EncodeUriPipe
+    FontAwesomeModule
   ]
 })
 export class SharedModule { }
