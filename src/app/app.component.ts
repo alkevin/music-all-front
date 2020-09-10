@@ -18,6 +18,8 @@ import { AuthService } from './shared/services/auth.service';
 })
 export class AppComponent implements OnInit {
 
+  urlLogo = AppConstants.assetLogoPath;
+  urlFaviLogo = AppConstants.assetFaviLogoPath;
   appTitle = AppConstants.appTitle;
   yearNow = new Date().getFullYear().toString();
   version = VERSION.full;
