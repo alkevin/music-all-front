@@ -8,7 +8,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LeftPartenaireComponent } from './components/sidepartenaire/left-partenaire/left-partenaire.component';
 import { RightPartenaireComponent } from './components/sidepartenaire/right-partenaire/right-partenaire.component';
-import { PublicModule } from '../public/public.module';
 
 @NgModule({
   declarations: [
