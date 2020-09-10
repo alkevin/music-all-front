@@ -1,13 +1,5 @@
 <app-header *ngIf="showHead" [user]="user$ | async" [appTitle]="appTitle"></app-header>
 
-<app-left *ngIf="showHead" [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-left>
-
-  <!--<app-left-partenaire *ngIf="showNavPartenaire"></app-left-partenaire> -->
-
     <router-outlet></router-outlet>
-
-  <!--<app-right-partenaire *ngIf="showNavPartenaire"></app-right-partenaire> -->
-
-<app-right *ngIf="showHead" [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-right>
 
 <app-footer *ngIf="showHead" [appVersion]="version" [yearNow]="yearNow"></app-footer>

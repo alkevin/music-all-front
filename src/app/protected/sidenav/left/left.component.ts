@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AppConstants } from './../../../../shared/constants/app.constants';
+import { AppConstants } from 'src/app/shared/constants/app.constants';
 
 @Component({
   selector: 'app-left',
@@ -14,12 +14,13 @@ export class LeftComponent implements OnInit {
   @Input()
   urlFaviLogo: string;
 
-  urlPicSidLeft = AppConstants.leftSideData;
+  urlPicSidLeft: any;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.urlPicSidLeft = AppConstants.leftSideData;
   }
 
 }

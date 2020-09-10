@@ -6,6 +6,7 @@ import { User } from 'src/app/shared/models/user';
 import { getUserLogged } from './../../state/selectors/user.selectors';
 import { AuthService } from './../../shared/services/auth.service';
 import { refreshUser } from './../../state/actions/user.actions';
+import { AppConstants } from 'src/app/shared/constants/app.constants';
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
@@ -13,7 +14,8 @@ import { refreshUser } from './../../state/actions/user.actions';
 })
 export class ProfilComponent implements OnInit {
 
-
+  urlLogo = AppConstants.assetLogoPath;
+  urlFaviLogo = AppConstants.assetFaviLogoPath;
   myUrlPhoto: string;
   user$: Observable<User>;
 
