@@ -9,14 +9,18 @@ import { SharedModule } from './shared/shared.module';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
-
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { LoginComponent } from './components/login/login.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './state/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { UserLoggedEffects } from './state/effects/user.effects';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { TokenInterceptor } from './shared/helpers/interceptor';
+import { ErrorInterceptor } from './shared/helpers/error.interceptor';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -24,12 +28,12 @@ registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
     CoreModule,
     NgxSpinnerModule,
@@ -42,9 +46,12 @@ registerLocaleData(localeFr, 'fr');
       }
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([UserLoggedEffects]),
   ],
   providers: [
-    {provide: LOCALE_ID, useValue: 'fr'},
+    { provide: LOCALE_ID, useValue: 'fr'},
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
