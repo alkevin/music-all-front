@@ -1,54 +1,8 @@
-<div class="center_container_profil">
-  <div class="container_avatar">
-    <div id="avatar_profil" [ngStyle]="{'background-image': 'url('+ myUrlPhoto +')'}">
-      image profil
-    </div>
-    <div id="nom_profil">
-      emplacement nom
-    </div>
+<main>
+  <div class="wrapper">
+    <app-header-profil [user]="user$ | async" [myUrlPhoto]="myUrlPhoto"></app-header-profil>
+    <app-nav-profil></app-nav-profil>
+    <router-outlet></router-outlet>
   </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Informations personnelles</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Informations musicales</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Card header</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="container_info_profil">
-    <div class="card">
-      <h4 class="card-header">Card header</h4>
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title
-          and make up the bulk of the card's content.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</main>
+
