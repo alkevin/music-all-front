@@ -31,9 +31,7 @@
               "src/assets/vendor.scss",
               "src/assets/main.scss"
             ],
-            "scripts": [
-              "./node_modules/chart.js/dist/Chart.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
