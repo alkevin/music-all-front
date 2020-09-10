@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppConstants } from 'src/app/shared/constants/app.constants';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  urlLogo = AppConstants.assetLogoPath;
+  urlFaviLogo = AppConstants.assetFaviLogoPath;
 
   constructor() { }
 

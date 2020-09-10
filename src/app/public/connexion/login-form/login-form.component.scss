@@ -1,0 +1,39 @@
+.btnHide {
+  border: none;
+  box-shadow: inherit;
+  transition: inherit;
+  padding-left: 9%;
+}
+
+.logincontainer {
+  margin-top: 13.25rem;
+  margin-bottom: 13.25rem;
+}
+
+.form-group {
+  padding-left: 22px;
+}
+
+.container {
+  padding-bottom: 0.25rem !important;
+}
+
+.center_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+.btnHide {
+  border: none;
+  box-shadow: inherit;
+  transition: inherit;
+  padding-left: 9%;
+}
+
+.card-footer {
+  border-bottom-left-radius: 38px;
+  border-bottom-right-radius: 38px;
+}

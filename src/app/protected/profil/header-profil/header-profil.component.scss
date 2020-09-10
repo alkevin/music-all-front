@@ -1,0 +1,37 @@
+.profil_banner {
+  background: var(--primary);
+  padding: inherit !important;
+  height: 7.3rem;
+}
+
+.banner_infos {
+  display: flex;
+  width:20%;
+  height:100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner_infos .col-6 {
+  text-align: center;
+}
+
+#avatar {
+  margin: 0.2rem 1rem 0.2rem 2rem;
+
+  //background-image: url('/assets/img/Favicon-blanc.png');
+
+  /* make a square container */
+  width: 6.8rem;
+  height: 6.8rem;
+
+  /* fill the container, preserving aspect ratio, and cropping to fit */
+  background-size: cover;
+
+  /* center the image vertically and horizontally */
+  background-position: top center;
+
+  /* round the edges to a circle with border radius 1/2 container size */
+  border-radius: 50%;
+  border: 1px solid white;
+}

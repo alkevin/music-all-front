@@ -1,0 +1,10 @@
+<app-left [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-left>
+<main>
+  <div class="wrapper">
+    <app-header-profil [user]="user$ | async" [myUrlPhoto]="myUrlPhoto"></app-header-profil>
+    <app-nav-profil></app-nav-profil>
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<app-right [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-right>
+

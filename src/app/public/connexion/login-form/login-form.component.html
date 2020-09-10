@@ -1,0 +1,37 @@
+
+  <form #loginForm="ngForm" (ngSubmit)="logIn(loginForm.value)">
+    <div id="wrapper">
+      <div class="container p-4 mr-auto">
+        <div class="card-body container">
+          <div class="form-group row">
+            <div style="width:89%;">
+              <input  class="form-control p-2" value={mail} name="mail" type="text" placeholder="votre mail" ngModel required />
+            </div>
+          </div>
+          <div class="form-group row">
+              <div class="input-group">
+                <input class="form-control p-2" type="password" name="password" [type]="hideInput ? 'password': 'text'" placeholder="password" ngModel required style="display:inline-flex;width:80%;height: 2.5rem;border-radius:0.25rem;">
+                <div class="input-group-prepend" style="background-color: white">
+                  <button class="btn btnHide" type="button" (click)="hideInput = !hideInput" >
+                    <span>
+                      <fa-icon [icon]="hideInput ? ['fas', 'eye'] : ['fas', 'eye-slash']"></fa-icon>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div *ngIf="invalidLogin" class="error text-white">
+                <div>Invalid credentials.</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div style="margin-bottom: 2%; text-align:center;">
+        <a class="dropdown-item" [routerLink]="'/connexion/signup'">Vous n'avez pas encore de compte ? <br>Inscrivez-vous !</a>
+    </div>
+    <div class="card-footer text-center">
+      <button onClick="" type="submit" class="btn btn-card btn-primary">Connexion</button> <!--  [disabled]="!loginForm.form.valid" -->
+    </div>
+  </form>
+

@@ -21,11 +21,13 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #1e1e24;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
 body::-webkit-scrollbar-thumb {
   background: #471C86;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
@@ -92,8 +94,8 @@ input.ng-invalid.ng-touched:focus {
 /* Tablet Landscape & Desktop Screens */
 @media only screen and (min-width: 960px){
   main {
-    margin-left: 21rem;
-    margin-right: 21rem;
+    margin-left: 5rem; // design with partenaire 21rem;
+    margin-right: 5rem; // design with partenaire 21rem;
   }
 }
 

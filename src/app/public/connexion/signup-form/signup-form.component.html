@@ -1,0 +1,119 @@
+<!-- <br>
+<div class="card">
+    <h5 class="card-header text-center">Inscription</h5>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" required class="form-control" id="inputEmail" placeholder="Email"
+                           formControlName="mail" [ngClass]="{ 'is-invalid': submitted && getFields.mail.errors }">
+                    <div *ngIf="submitted && getFields.mail.errors" class="invalid-feedback">
+                        <div *ngIf="getFields.mail.errors.required">Le mail est obligatoire</div>
+                        <div *ngIf="getFields.mail.errors.mail">mail mal formaté</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Mot de passe</label>
+                    <input type="password" required class="form-control" id="inputPassword" placeholder="Password"
+                           formControlName="password" [ngClass]="{ 'is-invalid': submitted && getFields.password.errors }">
+                    <div *ngIf="submitted && getFields.password.errors" class="invalid-feedback">
+                        <div *ngIf="getFields.password.errors.required">Le mot de passe est obligatoire</div>
+                        <div *ngIf="getFields.password.errors.minlength">Le mot de passe doit contenir au moins 6 charactères</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputMatchingPassword">MatchingPassword</label>
+                  <input type="matchingPassword" required class="form-control" id="inputMatchingPassword" placeholder="matchingPassword"
+                         formControlName="matchingPassword" [ngClass]="{ 'is-invalid': submitted && getFields.matchingPassword.errors }">
+                  <div *ngIf="submitted && getFields.matchingPassword.errors" class="invalid-feedback">
+                      <div *ngIf="getFields.matchingPassword.errors.required">Champs obligatoire</div>
+                      <div *ngIf="getFields.matchingPassword.errors.minlength">Le mot de passe doit matcher</div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <h5 class="card-header text-center">Personnel</h5>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputFirstName">Prenom</label>
+                    <input type="text" required class="form-control" id="inputFirstName" placeholder="Prenom"
+                           formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && getFields.lastName.errors }">
+                    <div *ngIf="submitted && getFields.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="getFields.lastName.errors.required">Le prénom est obligatoire</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputLastName">Nom</label>
+                    <input type="text" required class="form-control" id="inputLastName" placeholder="Nom"
+                           formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && getFields.firstName.errors }">
+                    <div *ngIf="submitted && getFields.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="getFields.firstName.errors.required">Le nom est obligatoire</div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary col-md-2" [disabled]="loading">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Valider
+            </button>
+
+        </form>
+    </div>
+</div> -->
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div id="wrapper">
+    <div class="container p-4 mr-auto">
+      <div class="card-body container">
+        <div class="form-group row">
+            <input type="text" required class="form-control p-2" id="inputFirstName" placeholder="Prénom"
+                   formControlName="lastName" [ngClass]="{ 'is-invalid': submitted && getFields.lastName.errors }">
+            <div *ngIf="submitted && getFields.lastName.errors" class="invalid-feedback">
+                <div *ngIf="getFields.lastName.errors.required">Le prénom est obligatoire</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <input type="text" required class="form-control p-2" id="inputLastName" placeholder="Nom"
+                   formControlName="firstName" [ngClass]="{ 'is-invalid': submitted && getFields.firstName.errors }">
+            <div *ngIf="submitted && getFields.firstName.errors" class="invalid-feedback">
+              <div *ngIf="getFields.firstName.errors.required">Le nom est obligatoire</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <input type="email" required class="form-control p-2" id="inputEmail" placeholder="Email"
+                   formControlName="mail" [ngClass]="{ 'is-invalid': submitted && getFields.mail.errors }">
+            <div *ngIf="submitted && getFields.mail.errors" class="invalid-feedback">
+              <div *ngIf="getFields.mail.errors.required">Le mail est obligatoire</div>
+              <div *ngIf="getFields.mail.errors.mail">mail mal formaté</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="input-group">
+              <input type="password" required class="form-control p-2" id="inputPassword" placeholder="Password"
+                     formControlName="password" [ngClass]="{ 'is-invalid': submitted && getFields.password.errors }">
+              <div *ngIf="submitted && getFields.password.errors" class="invalid-feedback">
+                <div *ngIf="getFields.password.errors.required">Le mot de passe est obligatoire</div>
+                <div *ngIf="getFields.password.errors.minlength">Le mot de passe doit contenir au moins 6 charactères</div>
+              </div>
+            </div>
+        </div>
+        <div class="form-group row">
+          <div class="input-group">
+            <input type="password" required class="form-control p-2" id="inputMatchingPassword" placeholder="Matching Password"
+                   formControlName="matchingPassword" [ngClass]="{ 'is-invalid': submitted && getFields.password.errors }">
+            <div *ngIf="submitted && getFields.password.errors" class="invalid-feedback">
+              <div *ngIf="getFields.password.errors.required">Le mot de passe est obligatoire</div>
+              <div *ngIf="getFields.password.errors.minlength">Le mot de passe doit contenir au moins 6 charactères</div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-center">
+    <button type="submit" class="btn btn-card btn-primary">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      Valider
+    </button>
+  </div>
+</form>

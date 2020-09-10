@@ -5,18 +5,14 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LeftComponent } from './components/sidenav/left/left.component';
-import { RightComponent } from './components/sidenav/right/right.component';
 import { LeftPartenaireComponent } from './components/sidepartenaire/left-partenaire/left-partenaire.component';
 import { RightPartenaireComponent } from './components/sidepartenaire/right-partenaire/right-partenaire.component';
-
+import { PublicModule } from '../public/public.module';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LeftComponent,
-    RightComponent,
     LeftPartenaireComponent,
     RightPartenaireComponent
   ],
@@ -24,13 +20,12 @@ import { RightPartenaireComponent } from './components/sidepartenaire/right-part
     SharedModule,
     HttpClientModule,
     RouterModule,
-    ProtectedModule
+    ProtectedModule,
+    PublicModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    LeftComponent,
-    RightComponent,
     LeftPartenaireComponent,
     RightPartenaireComponent
   ]

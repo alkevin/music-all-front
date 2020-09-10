@@ -31,6 +31,9 @@
   border: 1px solid white;
 }
 
+#avatar:hover {
+  cursor: pointer;
+}
 
 /* Mobile & Tablet Screens */
 @media only screen and (max-width: 959px){
