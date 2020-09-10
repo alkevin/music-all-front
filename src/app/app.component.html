@@ -1,4 +1,4 @@
-<app-header *ngIf="showHead" [appTitle]="appTitle"></app-header>
+<app-header *ngIf="showHead" [user]="user$ | async" [appTitle]="appTitle"></app-header>
 
 <app-left *ngIf="showHead" [urlLogo]="urlLogo" [urlFaviLogo]="urlFaviLogo"></app-left>
 
