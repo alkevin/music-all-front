@@ -18,8 +18,6 @@ import { AuthService } from './shared/services/auth.service';
 })
 export class AppComponent implements OnInit {
 
-  urlLogo = AppConstants.assetLogoPath;
-  urlFaviLogo = AppConstants.assetFaviLogoPath;
   appTitle = AppConstants.appTitle;
   yearNow = new Date().getFullYear().toString();
   version = VERSION.full;
@@ -37,16 +35,10 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         if (event.url === '/connexion/signin' || event.url === '/connexion/signup') {
           this.showHead = false;
-          this.showNavPartenaire = false;
+
         } else {
           this.showHead = true;
-          this.showNavPartenaire = true;
-        }
 
-        if (event.url === '/profil'){
-          this.showNavPartenaire = false;
-        } else {
-          this.showNavPartenaire = true;
         }
       }
     });

@@ -9,7 +9,8 @@ import { HeaderProfilComponent } from './profil/header-profil/header-profil.comp
 import { NavProfilComponent } from './profil/nav-profil/nav-profil.component';
 import { InfosPersoComponent } from './profil/infos-perso/infos-perso.component';
 import { InfosMusicienComponent } from './profil/infos-musicien/infos-musicien.component';
-
+import { MessagerieModule } from './messagerie/messagerie.module';
+import { SideNavModule } from './sidenav/sidenav.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { InfosMusicienComponent } from './profil/infos-musicien/infos-musicien.c
     SharedModule,
     ProtectedRoutingModule,
     HomeModule,
-    ProfilModule
+    ProfilModule,
+    MessagerieModule,
+    SideNavModule
   ]
 })
 export class ProtectedModule { }

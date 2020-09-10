@@ -11,6 +11,7 @@
 
     <li class="nav-item" *ngFor="let pic of urlHelpLogo; let i = index;">
       <a href="#" class="nav-link">
+        <!-- Ne pas tenir compte de l'erreur -->
         <span class="link-text">{{ pic.label }}</span>
         <img [src]=pic.url>
       </a>
