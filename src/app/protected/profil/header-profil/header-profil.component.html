@@ -1,0 +1,13 @@
+<div class="container profil_banner">
+  <div class="float-left">
+    <div id="avatar" [ngStyle]="{'background-image': 'url('+ myUrlPhoto +')'}" [routerLink]="['profil']" title="profil"></div>
+  </div>
+  <div class="banner_infos row text-white">
+    <div class="container" style="height:50%; display: flex; align-items: end;">
+      {{ user.firstName }}
+    </div>
+    <div class="container" style="display:flex; flex-direction: column; height:50%">
+      {{ user.lastName | uppercase }}
+    </div>
+  </div>
+</div>
