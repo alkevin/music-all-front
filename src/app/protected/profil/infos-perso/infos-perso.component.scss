@@ -19,3 +19,25 @@ table > tr > td > input[type="text"], table > tr > td > input[type="date"]{
 #btn_valider_info_profil{
   text-align: center;
 }
+.libelle{
+  font-weight: bold;
+}
+
+/* mobile & tablet */
+@media only screen and (max-width: 959px){
+  #table_info_perso > tr > td{
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+
+/* Tablet Landscape */
+@media only screen and (min-width: 960px){
+  #table_info_perso > tr > td{
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+}
