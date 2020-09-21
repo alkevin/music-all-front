@@ -20,7 +20,9 @@
   height: 100%;
   width:100%;
   border-left: 1px solid var(--primary);
+//overflow: auto;
 }
+
 
 .nav-item {
   width:100%;
@@ -28,10 +30,6 @@
 
 .nav-item:last-child {
   margin-top: auto;
-}
-
-.nav-item:first-child {
-  //margin-top: auto;
 }
 
 .nav-link {
