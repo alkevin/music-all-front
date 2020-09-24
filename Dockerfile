@@ -1,6 +1,6 @@
 FROM ubuntu:18.04 as ubuntu
 VOLUME .
-FROM trion/ng-cli:10.1.0 as builder
+FROM trion/ng-cli:9.0.5 as builder
 WORKDIR /app
 COPY package.json package.json
 COPY package-lock.json package-lock.json
