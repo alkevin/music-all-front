@@ -6,6 +6,7 @@ import { loadUserFailure, loadUser } from '../../../state/actions/user.actions';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ofType } from '@ngrx/effects';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
@@ -18,11 +19,13 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   hideInput = true;
   invalidLogin = false;
   private destroyed$ = new Subject();
+  loaded = false;
 
   @ViewChild('loginForm', {static: false}) loginForm: NgForm;
 
   constructor(private store: Store<AppState>
-            , private actionsSubj: ScannedActionsSubject) { }
+            , private actionsSubj: ScannedActionsSubject
+            , private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     // réponse cas d'échec
@@ -33,10 +36,17 @@ export class LoginFormComponent implements OnInit, OnDestroy {
       this.loginForm.reset();
       this.invalidLogin = true;
     });
+
+    if (this.loaded) {
+      this.spinner.show();
+    }
   }
 
   logIn(form: NgForm) {
+    this.loaded = !this.loaded;
+    this.spinner.show();
     this.store.dispatch(loadUser( {data: form}));
+    this.spinner.hide();
   }
 
   ngOnDestroy() {

@@ -6,18 +6,21 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { ToggleConnexionComponent } from './toggle-connexion/toggle-connexion.component';
+import { LoaderComponent } from '../../components/loader/loader.component';
+
 
 @NgModule({
   declarations: [
     ConnexionComponent,
     LoginFormComponent,
     SignupFormComponent,
-    ToggleConnexionComponent
+    ToggleConnexionComponent,
+    LoaderComponent
   ],
   imports: [
     RouterModule,
     SharedModule,
-    ConnexionRoutingModule
+    ConnexionRoutingModule,
   ]
 })
 export class ConnexionModule { }

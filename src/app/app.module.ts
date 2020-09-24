@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
@@ -21,6 +20,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { TokenInterceptor } from './shared/helpers/interceptor';
 import { ErrorInterceptor } from './shared/helpers/error.interceptor';
+import { LoaderComponent } from './components/loader/loader.component';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -36,7 +36,6 @@ registerLocaleData(localeFr, 'fr');
     HttpClientModule,
     SharedModule,
     CoreModule,
-    NgxSpinnerModule,
     ToastrModule.forRoot(),
     StoreModule.forRoot(reducers, {
       metaReducers,
