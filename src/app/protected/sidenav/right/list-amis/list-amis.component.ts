@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MOCKLISTAMIS } from './mock-ListAmis';
 
 @Component({
   selector: 'app-list-amis',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-amis.component.scss']
 })
 export class ListAmisComponent implements OnInit {
+  mocklistamis = MOCKLISTAMIS;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.mocklistamis);
   }
 
 }
