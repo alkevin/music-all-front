@@ -1,6 +1,6 @@
 export class AppConstants {
 
-  private static baseUrl = 'http://localhost:5000/api';
+  private static baseUrl = 'https://music-all-back.herokuapp.com/api';
 
   public static get api_login_url(): string {
     return this.baseUrl + '/auth/signin';
