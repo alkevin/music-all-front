@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   storeCurrentUser(token: string) {
-    // console.log('storeCurrentUser :' + JSON.stringify(jwt_decode(token)));
+    console.log('storeCurrentUser :' + JSON.stringify(jwt_decode(token)));
     sessionStorage.setItem(this.jwt, token);
   }
 

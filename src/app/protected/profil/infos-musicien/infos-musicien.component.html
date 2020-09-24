@@ -1,1 +1,40 @@
-<p>infos-musicien works!</p>
+<div class="container">
+  <div class="wrapper">
+    <div class="card">
+      <nav class="navbar bg-primary">
+        <div class="navbar-bar" id="title_card_navbar">
+          Infos Musicien
+        </div>
+      </nav>
+      <form>
+      <div class="card-body container">
+          <div class="form-group">
+            <table class="table table-borderless" id="table_info_musicien">
+              <tr>
+                <td class="libelle">Genre(s): </td>
+                <td *ngFor="let genre of genreMusic" class="form-check form-check-inline">
+                  <input class="form-check-input" id="genre_{{genre.libelle}}" type="checkbox" name="genre_{{genre.libelle}}" value="{{genre.id}}"/>
+                  <label class="form-check-label" for="genre_{{genre.libelle}}">{{genre.libelle}}</label>
+                </td>
+              </tr>
+              <!-- a voir plus la boucle-->
+              <tr>
+                <td class="libelle">Instrument 1: </td>
+                <td>Guitare</td>
+              </tr>
+              <tr>
+                <td class="libelle">Niveau de maîtrise: </td>
+                <td class="form-check form-check-inline"><input type="radio" name="level_instrument" id="amateur" value="amateur"><label for="amateur"> amateur</label></td>
+                <td class="form-check form-check-inline"><input type="radio" name="level_instrument" id="professionnel" value="professionnel"><label for="professionnel"> professionnel</label></td>
+              </tr>
+              <!-- fin -->
+            </table>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <input type="submit" id="btn_valider_info_musicien" class="btn btn-primary" name="valider_info_musicien" value="valider"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

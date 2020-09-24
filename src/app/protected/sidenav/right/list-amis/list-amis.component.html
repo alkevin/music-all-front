@@ -1,1 +1,9 @@
-<p>list-amis works!</p>
+<li *ngFor="let mock of mocklistamis" class="nav-item">
+  <a href="#" class="nav-link">
+    <div id="avatar"></div>
+    <span class="link-text">
+      {{ mock.name }}
+    </span>
+
+  </a>
+</li>

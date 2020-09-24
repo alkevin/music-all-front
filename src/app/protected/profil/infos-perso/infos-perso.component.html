@@ -1,1 +1,36 @@
-<p>infos-perso works!</p>
+<div class="container">
+  <div class="wrapper">
+    <div class="card">
+      <nav class="navbar bg-primary">
+        <div class="navbar-bar" id="title_card_navbar">
+          Infos Personnelles
+        </div>
+      </nav>
+      <form>
+      <div class="card-body container">
+          <div class="form-group">
+            <table class="table table-borderless" id="table_info_perso">
+              <tr>
+                <td class="libelle">Nom: </td><td><input type="text" name="profil_lastname" id="profil_lastname" class="form-control"/></td>
+                <td class="libelle">Prénom: </td><td><input type="text" name="profil_firstname" id="profil_firstname" class="form-control"/></td>
+                <td class="libelle">Date de Naissance: </td><td><input type="date" name="profil_birthdate" id="profil_birthdate" class="form-control"/></td>
+              </tr>
+              <tr>
+                <td class="libelle">Genre: </td>
+                <td><input type="radio" name="profil_gender" id="male" value="m"><span> Homme</span></td>
+                <td><input type="radio" name="profil_gender" id="female" value="f"><span> Femme</span></td>
+              </tr>
+              <tr>
+                <td class="libelle">Adresse: </td>
+                <td><input type="text" name="profil_address" id="profil_address" class="form-control"/></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <input type="submit" id="btn_valider_info_profil" class="btn btn-primary" name="valider_info_profil" value="valider"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
