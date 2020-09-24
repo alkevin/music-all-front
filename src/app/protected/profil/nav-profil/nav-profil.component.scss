@@ -21,3 +21,16 @@
 .nav-link:hover {
   cursor: pointer;
 }
+
+/* mobile & tablet */
+@media only screen and (max-width: 959px){
+  .nav-item{
+    z-index: 0;
+  }
+}
+
+@media only screen and (min-width: 960px){
+  .nav-item{
+    z-index: 0;
+  }
+}

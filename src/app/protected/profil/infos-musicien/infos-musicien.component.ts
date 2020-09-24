@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GENREMUSIC } from './../mock-infoMusique';
 
 @Component({
   selector: 'app-infos-musicien',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./infos-musicien.component.scss']
 })
 export class InfosMusicienComponent implements OnInit {
+
+  genreMusic = GENREMUSIC;
 
   constructor() { }
 

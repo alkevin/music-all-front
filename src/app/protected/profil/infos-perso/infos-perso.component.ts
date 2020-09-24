@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { USERINFOS } from './../mock-userInfos';
 
 @Component({
   selector: 'app-infos-perso',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfosPersoComponent implements OnInit {
 
+  userInfo = USERINFOS;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.userInfo);
   }
 
 }
